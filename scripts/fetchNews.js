@@ -12,7 +12,8 @@ async function getNewsData() {
     process.exit(1);
   }
 
-  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+  // 2.5 flash 최신 엔드포인트 적용
+  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
 
   const prompt = `지난 24시간 동안 보도된 '삼성E&A(Samsung E&A, 삼성엔지니어링)'의 글로벌 수주, 입찰, FEED, 계약 소식을 검색하고 정리해 줘.
 필수 모니터링 대상: 사우디 아람코(Aramco)/SABIC, UAE ADNOC, 카타르 QE, 바레인 Bapco, 쿠웨이트 KOC/KNPC, 인도 ACME, 멕시코 Mexinol, 호주/인니 INPEX.
@@ -40,7 +41,7 @@ async function getNewsData() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         contents: [{ parts: [{ text: prompt }] }],
-        tools: [{ google_search: {} }]
+        tools: [{ googleSearch: {} }]
       })
     });
 
@@ -67,7 +68,7 @@ async function getNewsData() {
 
     const outputPath = path.join(publicDir, 'news.json');
     fs.writeFileSync(outputPath, text, 'utf-8');
-    console.log('news.json 업데이트 완료');
+    console.log('news.json 업데이트 완료!');
   } catch (error) {
     console.error('스크립트 실행 에러:', error);
     process.exit(1);
