@@ -1,20 +1,14 @@
 {
-  "updatedAt": "2026. 3. 30 07:30 기준",
+  "updatedAt": "2026. 9. 22 11:00 기준",
   "sections": [
     {
       "id": 1,
       "title": "주요 기업 동향",
       "items": [
         {
-          "headline": "삼성E&A, 사우디 파딜리 가스 플랜트 등 대형 EPC 현장 공정 호조",
-          "summary": "삼성E&A가 수주한 사우디 아람코 파딜리 가스 증산 프로젝트 패키지 1·4번의 모듈러 공법 및 AWP(Advanced Work Packaging) 적용이 차질 없이 진행되며 수익성 중심의 견조한 매출 성장을 견인하고 있습니다.",
+          "headline": "삼성E&A, 글로벌 가스·정유 대형 EPC 현장 실행력 및 원가 관리 집중",
+          "summary": "사우디 파딜리(Fadhili) 등 주력 프로젝트의 모듈화·AWP 공법 적용 가속화와 함께 철저한 리스크 관리 기반의 안정적 수익성 확보 전략 지속.",
           "source": "국내외 경제지 종합",
-          "url": "https://www.samsungena.com"
-        },
-        {
-          "headline": "삼성E&A 친환경 사업(Ahead) 가시화… 말레이시아 청정 수소 프로젝트 박차",
-          "summary": "H2Biscus 그린 수소·암모니아 프로젝트의 FEED 완료 후 본 EPC 전환 단계 점검이 가속화되며, CCUS 및 SAF(지속가능항공유) 등 에너지 전환 분야 선점 전략이 본격적인 결실을 맺고 있습니다.",
-          "source": "E&P 및 EPC 전문 뉴스",
           "url": "https://www.samsungena.com"
         }
       ]
@@ -24,15 +18,9 @@
       "title": "그룹 및 해외 언론 뉴스",
       "items": [
         {
-          "headline": "해외 언론, 'FEED to EPC' 연계 전략으로 글로벌 EPC 경쟁력 재편 평가",
-          "summary": "MEED 및 Hydrocarbon Processing 등 해외 주요 언론은 삼성E&A를 비롯한 선도 EPC 기업들이 선제적 FEED(기본설계) 수행을 통해 EPC 수주 확률을 크게 높이고 리스크를 사전 차단하는 고수익 중심 구조로 탈바꿈했다고 분석했습니다.",
-          "source": "MEED / Hydrocarbon Processing",
-          "url": "https://www.samsungena.com"
-        },
-        {
-          "headline": "중동 및 아태지역 탈탄소 EPC 시장 규모, 2030년까지 연평균 12% 성장 전망",
-          "summary": "글로벌 시장조사기관 보고서에 따르면, 기존 가스·정유 플랜트의 저탄소화(CCUS 연계) 및 그린 암모니아 플랜트 발주가 가속화되면서 글로벌 엔지니어링 기업들의 수주 잔고 질이 더욱 개선될 것으로 전망됩니다.",
-          "source": "Global Energy Review",
+          "headline": "글로벌 플랜트 업계, 'FEED-to-EPC' 및 에너지 전환 파트너십 주목",
+          "summary": "글로벌 전문 매체들은 삼성E&A를 포함한 선도 EPC사들이 기본설계(FEED) 선점을 통해 후속 EPC 수주 경쟁력을 극대화하고 저탄소 사업 영역을 확장하고 있다고 평가.",
+          "source": "MEED / 글로벌 플랜트 리뷰",
           "url": "https://www.samsungena.com"
         }
       ]
@@ -42,15 +30,9 @@
       "title": "입찰 관련 주요 뉴스",
       "items": [
         {
-          "headline": "사우디·UAE 주요 가스 처리 및 석유화학 대형 패키지 입찰 경쟁 본격화",
-          "summary": "사우디 아람코의 자푸라 비전통 가스전 2단계 및 UAE 아드녹의 루와이스 화학단지 유틸리티 패키지 입찰이 임박함에 따라, 글로벌 Top-tier EPC 업체들의 컨소시엄 구성 및 가격 입찰 준비가 치열해지고 있습니다.",
+          "headline": "중동 및 동남아 주요 가스 처리·석유화학 패키지 입찰 동향",
+          "summary": "사우디 아람코, UAE ADNOC, 카타르 QE, 인도네시아 등 주요 발주처의 대형 가스 증산 및 다운스트림 패키지 상업 입찰 평가 진행 및 연내 결과 가시화 기대.",
           "source": "플랜트 입찰 소식통",
-          "url": "https://www.samsungena.com"
-        },
-        {
-          "headline": "동남아 및 카타르 LNG/가스 플랜트 추가 발주 파이프라인 지속 확대",
-          "summary": "인도네시아 및 말레이시아의 해상/육상 가스전 연계 LNG 플랜트 프로젝트와 카타르 에너지의 추가 가스 처리 시설 입찰 타임라인이 구체화되면서 아시아·중동 지역 EPC 수주 모멘텀이 강화될 것으로 보입니다.",
-          "source": "Upstream Online",
           "url": "https://www.samsungena.com"
         }
       ]
@@ -60,36 +42,12 @@
       "title": "글로벌 석유 메이저 (Aramco, ADNOC 등)",
       "items": [
         {
-          "headline": "아람코(Aramco), 2030 가스 증산 목표 달성 위해 상류/중류 CAPEX 집행 지속",
-          "summary": "사우디 아람코가 가스 생산량을 2030년까지 2021년 대비 60% 이상 늘린다는 계획하에 비전통 가스 및 가스전 정제 설비 확충을 위한 대규모 EPC 발주를 차질 없이 진행하고 있습니다.",
-          "source": "Aramco Newsroom",
+          "headline": "사우디 아람코·UAE ADNOC, 대규모 상류·다운스트림 투자 집행 가속",
+          "summary": "중동 국영 오일 메이저들의 비전통 가스 개발 프로젝트 및 지속가능 에너지 인프라 발주가 집중되며 글로벌 탑티어 엔지니어링 기업 대상 입찰 파이프라인 확대.",
+          "source": "MEED / 석유가스 저널",
           "url": "https://www.aramco.com"
-        },
-        {
-          "headline": "아드녹(ADNOC), 150억 달러 규모 저탄소 자본지출 및 저탄소 LNG 투자 가속",
-          "summary": "UAE 아드녹은 하일앤샤(Hail & Ghasha) 가스전 수소·CCUS 연계 사업과 루와이스 저탄소 LNG 프로젝트를 통해 탄소 배출을 극소화하는 지속가능 에너지 인프라 구축을 총력 추진 중입니다.",
-          "source": "ADNOC Media Center",
-          "url": "https://www.adnoc.ae"
         }
       ]
-    }
-  ],
-  "items": [
-    {
-      "title": "삼성E&A 핵심 프로젝트 공정 및 친환경 신사업 순항",
-      "summary": "사우디 파딜리 프로젝트 등 대형 현장의 차질 없는 공정 진행과 'FEED to EPC' 전략 기반의 고수익 수주 구조 확립.",
-      "category": "주요동향",
-      "client": "Samsung E&A",
-      "source": "삼성E&A 브리핑",
-      "url": "https://www.samsungena.com"
-    },
-    {
-      "title": "아람코·아드녹 가스 증산 및 저탄소 플랜트 발주 호조",
-      "summary": "중동 메이저 발주처의 대규모 가스 증산 및 CCUS 연계 플랜트 CAPEX 투자 확대로 국내외 EPC 수주 파이프라인 견조.",
-      "category": "시장전망",
-      "client": "Aramco / ADNOC",
-      "source": "MEED 종합",
-      "url": "https://www.aramco.com"
     }
   ]
 }
