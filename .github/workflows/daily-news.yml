@@ -2,9 +2,9 @@ name: Daily Samsung E&A News Auto Update
 
 on:
   schedule:
-    # 매일 아침 한국 시간(KST) 06:15 자동 실행 (UTC 기준 21:15)
+    # 매일 한국 시간 오전 06:15 (UTC 21:15) 자동 실행
     - cron: '15 21 * * *'
-  workflow_dispatch: # 웹에서 수동으로 즉시 테스트 실행 가능하도록 설정
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -12,6 +12,7 @@ permissions:
 jobs:
   update-news:
     runs-on: ubuntu-latest
+
     steps:
       - name: 저장소 체크아웃
         uses: actions/checkout@v4
@@ -31,4 +32,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add public/news.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update: Daily briefing $(date +'%Y-%m-%d')" && git push)
+          git commit -m "Auto update news briefing [skip ci]" || exit 0
+          git push
