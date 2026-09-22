@@ -1,109 +1,129 @@
 import React, { useState, useEffect } from 'react';
 
-const defaultNews = [
-  {
-    id: 1,
-    category: "1. 주요 기업 동향",
-    headline: "삼성E&A, 친환경·에너지 전환(E&T) 중심 미래 성장 동력 가속화",
-    summary: "사우디 파딜리(Fadhili) 가스 증산 등 대형 프로젝트의 순항과 함께 수소, 탄소포집(CCUS) 및 지속가능 항공유(SAF) 분야 글로벌 파트너십을 공격적으로 확대 중.",
-    source: "삼성E&A IR / 업계 종합",
-    publishedAt: "2026-09-22",
-    link: "https://www.samsungena.com"
-  },
-  {
-    id: 2,
-    category: "2. 그룹 및 해외 언론 뉴스",
-    headline: "글로벌 플랜트 엔지니어링 시장 내 K-EPC 기술 경쟁력 집중 조명",
-    summary: "중동 발주처들의 모듈화 공법 및 디지털 EPC 적용 요구가 강화되는 가운데, 삼성E&A의 FEED-to-EPC 연계 수행 역량과 프로젝트 납기 준수 신뢰도가 높게 평가됨.",
-    source: "해외 플랜트 저널",
-    publishedAt: "2026-09-22",
-    link: "https://www.samsungena.com"
-  },
-  {
-    id: 3,
-    category: "3. 입찰 관련 주요 뉴스",
-    headline: "중동 및 동남아 대형 가스·정유 패키지 입찰 파이프라인 본격화",
-    summary: "사우디, UAE, 카타르 및 인도네시아 등 주요 지역 대형 가스 처리 및 다운스트림 패키지의 상업 입찰 평가가 진행 중이며 연내 우선협상대상자 선정 기대.",
-    source: "입찰 정보 모니터링",
-    publishedAt: "2026-09-22",
-    link: "https://www.samsungena.com"
-  },
-  {
-    id: 4,
-    category: "4. 글로벌 석유 메이저 (Aramco, ADNOC 등)",
-    headline: "사우디 아람코·UAE 아드녹, 대규모 가스 증산 및 저탄소 프로젝트 발주 확대",
-    summary: "아람코의 비전통 가스 개발 및 아드녹의 친환경 석유화학 콤플렉스 투자 계획이 가시화되며 글로벌 탑티어 EPC 기업 대상 패키지 발주가 연쇄적으로 이어질 전망.",
-    source: "MEED / Energy Focus",
-    publishedAt: "2026-09-22",
-    link: "https://www.aramco.com"
-  }
-];
-
 export default function App() {
-  const [newsList, setNewsList] = useState(defaultNews);
-  const [updatedTime, setUpdatedTime] = useState("최근 24시간 기준");
+  const [cards, setCards] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // news.json이 있으면 동적으로 읽어오고, 없거나 비어있으면 기본 브리핑을 유지
-    fetch('/news.json?t=' + new Date().getTime())
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.length > 0) {
-          setNewsList(data);
-          setUpdatedTime("자동 갱신 완료");
+    fetch('/news.json?v=' + Date.now())
+      .then((res) => res.json())
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setCards(data);
         } else if (data && data.sections) {
-          const flat = data.sections.map((s, idx) => ({
-            id: s.id || idx + 1,
-            category: `${idx + 1}. ${s.title}`,
-            headline: s.items[0]?.headline || s.title,
-            summary: s.items[0]?.summary || "",
-            source: s.items[0]?.source || "업계 종합",
-            publishedAt: data.updatedAt || "2026-09-22",
-            link: s.items[0]?.url || "https://www.samsungena.com"
+          // 혹시 모를 이전 포맷 대비
+          const converted = data.sections.map((sec, idx) => ({
+            id: `card-${idx + 1}`,
+            category: "동향",
+            client: "글로벌 발주처",
+            title: sec.items[0]?.headline || sec.title,
+            titleEn: "Global Plant Market Briefing",
+            summary: [sec.items[0]?.summary || ""],
+            source: sec.items[0]?.source || "종합",
+            publishedAt: data.updatedAt || "오늘",
+            url: sec.items[0]?.url || "https://www.samsungena.com"
           }));
-          setNewsList(flat);
-          setUpdatedTime(data.updatedAt || "자동 갱신 완료");
+          setCards(converted);
         }
+        setLoading(false);
       })
-      .catch(() => {
-        // 캐시/네트워크 문제 발생 시 기본 브리핑 표시
+      .catch((err) => {
+        console.error(err);
+        setLoading(false);
       });
   }, []);
 
   return (
-    <div style={{ maxWidth: '480px', margin: '0 auto', padding: '20px 16px', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif', backgroundColor: '#f8fafc', minHeight: '100vh' }}>
-      <header style={{ borderBottom: '2px solid #2563eb', paddingBottom: '12px', marginBottom: '20px' }}>
-        <h1 style={{ fontSize: '20px', fontWeight: '800', color: '#0f172a', margin: '0 0 6px 0', display: 'flex', alignItems: 'center', gap: '8px' }}>
-          📰 일일 아침 뉴스 브리핑
-        </h1>
-        <p style={{ fontSize: '12px', color: '#64748b', margin: 0 }}>
-          업데이트: {updatedTime}
-        </p>
+    <div style={{ maxWidth: '520px', margin: '0 auto', padding: '16px', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif', backgroundColor: '#f1f5f9', minHeight: '100vh' }}>
+      
+      {/* 상단 헤더 */}
+      <header style={{ backgroundColor: '#ffffff', borderRadius: '16px', padding: '16px 20px', marginBottom: '16px', boxShadow: '0 1px 3px rgba(0,0,0,0.05)', borderBottom: '3px solid #002f6c' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <h1 style={{ fontSize: '18px', fontWeight: '800', color: '#002f6c', margin: 0, display: 'flex', alignItems: 'center', gap: '6px' }}>
+            📋 삼성E&A 글로벌 수주·입찰 브리핑
+          </h1>
+        </div>
+        <div style={{ fontSize: '12px', color: '#64748b', marginTop: '6px', display: 'flex', gap: '8px' }}>
+          <span>모니터링: 사우디, UAE, 카타르, 바레인, 쿠웨이트 등</span>
+        </div>
       </header>
 
-      <main style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        {newsList.map((item) => (
-          <div key={item.id} style={{ backgroundColor: '#ffffff', borderRadius: '14px', padding: '18px 16px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)', border: '1px solid #e2e8f0' }}>
-            <h2 style={{ fontSize: '15px', fontWeight: '700', color: '#1d4ed8', margin: '0 0 10px 0' }}>
-              {item.category}
-            </h2>
-            <h3 style={{ fontSize: '16px', fontWeight: '700', color: '#1e293b', margin: '0 0 8px 0', lineHeight: '1.4' }}>
-              {item.headline || item.title}
-            </h3>
-            <p style={{ fontSize: '14px', color: '#475569', margin: '0 0 12px 0', lineHeight: '1.5' }}>
-              {Array.isArray(item.summary) ? item.summary.join(' ') : item.summary}
-            </p>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', color: '#94a3b8', borderTop: '1px solid #f1f5f9', paddingTop: '10px' }}>
-              <span>출처: {item.source}</span>
-              {item.link && (
-                <a href={item.link} target="_blank" rel="noreferrer" style={{ color: '#2563eb', textDecoration: 'none', fontWeight: '600' }}>
-                  원문 보기 →
-                </a>
+      {/* 카드뉴스 본문 */}
+      {loading ? (
+        <div style={{ textAlign: 'center', padding: '40px 0', color: '#64748b', fontSize: '14px' }}>
+          브리핑 데이터를 불러오는 중입니다...
+        </div>
+      ) : cards.length === 0 ? (
+        <div style={{ backgroundColor: '#ffffff', borderRadius: '14px', padding: '30px', textAlign: 'center', color: '#64748b' }}>
+          금일 신규 수주·입찰 공시 및 기사가 없습니다.
+        </div>
+      ) : (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+          {cards.map((card) => (
+            <article key={card.id} style={{ backgroundColor: '#ffffff', borderRadius: '16px', padding: '18px', boxShadow: '0 2px 6px rgba(0,0,0,0.04)', border: '1px solid #e2e8f0' }}>
+              
+              {/* 카테고리 태그 및 발주처 */}
+              <div style={{ display: 'flex', gap: '6px', alignItems: 'center', marginBottom: '10px' }}>
+                <span style={{ 
+                  backgroundColor: card.category === '수주' ? '#e0f2fe' : card.category === '입찰' ? '#fef3c7' : '#f3e8ff',
+                  color: card.category === '수주' ? '#0284c7' : card.category === '입찰' ? '#d97706' : '#7c3aed',
+                  fontSize: '11px', fontWeight: '700', padding: '3px 8px', borderRadius: '6px' 
+                }}>
+                  {card.category}
+                </span>
+                <span style={{ backgroundColor: '#f8fafc', border: '1px solid #cbd5e1', color: '#334155', fontSize: '11px', fontWeight: '600', padding: '3px 8px', borderRadius: '6px' }}>
+                  {card.client}
+                </span>
+                <span style={{ fontSize: '11px', color: '#94a3b8', marginLeft: 'auto' }}>
+                  {card.publishedAt}
+                </span>
+              </div>
+
+              {/* 국문 제목 */}
+              <h2 style={{ fontSize: '16px', fontWeight: '700', color: '#0f172a', margin: '0 0 4px 0', lineHeight: '1.4' }}>
+                {card.title}
+              </h2>
+
+              {/* 영문 원문 제목 */}
+              {card.titleEn && (
+                <p style={{ fontSize: '12px', color: '#64748b', margin: '0 0 12px 0', fontStyle: 'italic', lineHeight: '1.3' }}>
+                  {card.titleEn}
+                </p>
               )}
-            </div>
-          </div>
-        ))}
-      </main>
+
+              {/* 3줄 불릿 요약 */}
+              <div style={{ backgroundColor: '#f8fafc', borderRadius: '10px', padding: '12px', marginBottom: '12px' }}>
+                <ul style={{ margin: 0, paddingLeft: '18px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  {Array.isArray(card.summary) ? (
+                    card.summary.map((point, pIdx) => (
+                      <li key={pIdx} style={{ fontSize: '13px', color: '#334155', lineHeight: '1.45' }}>
+                        {point}
+                      </li>
+                    ))
+                  ) : (
+                    <li style={{ fontSize: '13px', color: '#334155', lineHeight: '1.45' }}>{card.summary}</li>
+                  )}
+                </ul>
+              </div>
+
+              {/* 하단 출처 및 링크 */}
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', color: '#94a3b8' }}>
+                <span>출처: {card.source}</span>
+                {card.url && (
+                  <a href={card.url} target="_blank" rel="noreferrer" style={{ color: '#0284c7', textDecoration: 'none', fontWeight: '600' }}>
+                    상세 원문 →
+                  </a>
+                )}
+              </div>
+
+            </article>
+          ))}
+        </div>
+      )}
+
+      <footer style={{ textAlign: 'center', fontSize: '11px', color: '#94a3b8', marginTop: '24px', paddingBottom: '16px' }}>
+        삼성E&A EPC Bidding Intelligence Briefing
+      </footer>
     </div>
   );
 }
