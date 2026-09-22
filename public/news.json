@@ -1,146 +1,95 @@
-[
-  {
-    "id": "card-1",
-    "deepLink": "?card=card-1",
-    "category": "수주 / EPC",
-    "client": "사우디 Aramco",
-    "title": "사우디 아람코 자푸라 비전통 가스전 2단계 및 파드힐리 가스 EPC 대형 수주",
-    "titleEn": "Aramco Fadhili & Jafurah Gas Plant Expansion EPC Contracts",
-    "summary": [
-      "파드힐리 가스 증설 패키지 1·4번 및 자푸라 유틸리티·부대시설 EPC 계약 체결 완료",
-      "아람코의 2030 가스 증산 계획에 맞춘 테크니컬 스펙 및 상세 설계 고도화 협의 지속",
-      "총 계약 금액 약 60억 달러 규모의 수주를 통한 중동 가스 플랜트 시장 독보적 입지 확보"
-    ],
-    "source": "Upstream Online",
-    "publishedAt": "2024-04-03",
-    "url": "https://www.samsungena.com"
-  },
-  {
-    "id": "card-2",
-    "deepLink": "?card=card-2",
-    "category": "FEED",
-    "client": "사우디 SABIC",
-    "title": "사우디 SABIC 저탄소 석유화학 단지 FEED 수행 및 EPC 연계 동향",
-    "titleEn": "SABIC Low-Carbon Petrochemical Complex FEED & Pre-FEED Pipeline",
-    "summary": [
-      "SABIC 주빌·얀부 석유화학 단지의 탈탄소화 및 수소 연계 플랜트 FEED 단계 수행 완료",
-      "Early Engagement(선제적 참여) 전략을 바탕으로 발주처와 상세 공정 최적화 평가 진행",
-      "향후 수십억 달러 규모 본 EPC 전환을 통한 사우디 내 안정적 대형 수주 잔고 확보 추진"
-    ],
-    "source": "MEED",
-    "publishedAt": "2024-11-15",
-    "url": "https://www.samsungena.com"
-  },
-  {
-    "id": "card-3",
-    "deepLink": "?card=card-3",
-    "category": "FEED to EPC",
-    "client": "UAE ADNOC",
-    "title": "UAE 아부다비 ADNOC 루와이스 청정 수소/암모니아 FEED 및 EPC 입찰",
-    "titleEn": "ADNOC Ruwais Blue Ammonia & Carbon Capture Project FEED-to-EPC Transition",
-    "summary": [
-      "루와이스 청정 암모니아 생산 설비 및 탄소 포집(CCS) 연계 패키지 FEED 완료 및 상업 입찰 전환",
-      "발주처 최종투자결정(FID) 임박에 따른 EPC 가격 연동 조건 및 공기 최적화 수립 협의",
-      "약 10억~15억 달러 규모의 신규 EPC 수주를 통한 친환경 에너지 전환 마일스톤 달성 기대"
-    ],
-    "source": "E&P 전문지",
-    "publishedAt": "2025-02-10",
-    "url": "https://www.samsungena.com"
-  },
-  {
-    "id": "card-4",
-    "deepLink": "?card=card-4",
-    "category": "입찰",
-    "client": "카타르 QE",
-    "title": "카타르 에너지(QE) 노스필드 증설(NFE/NFS) 유틸리티 패키지 입찰 동향",
-    "titleEn": "QatarEnergy North Field Expansion Utilities & Offsites EPC Bidding",
-    "summary": [
-      "카타르 노스필드 사우스(NFS) 오프사이트 및 유틸리티 공정 EPC 기술/상업 입찰 참여",
-      "QE 발주처의 기술 평가 승인 완료 후 글로벌 메이저 EPC사들과 최종 가격 경쟁 진행",
-      "수억 달러 규모의 패키지 수주를 통해 중동 LNG 벨류체인 포트폴리오 다변화 추진"
-    ],
-    "source": "Petroleum Economist",
-    "publishedAt": "2025-05-18",
-    "url": "https://www.samsungena.com"
-  },
-  {
-    "id": "card-5",
-    "deepLink": "?card=card-5",
-    "category": "EPC",
-    "client": "바레인 Bapco",
-    "title": "바레인 밥코(Bapco) 정유공장 현대화(BMP) 잔여 공정 연계 및 개보수 사업",
-    "titleEn": "Bapco Modernization Program (BMP) Process Integration & Energy Efficiency",
-    "summary": [
-      "Bapco 정유공장 현대화 사업(BMP) 잔여 탈황 및 수소 제조 유닛 연계 공정 시운전 단계 진입",
-      "발주처 대상 에너지 효율화 및 탄소 배출 저감을 위한 개보수(Revamp) 추가 계약 협의",
-      "바레인 국영 에너지 프로젝트 성공적 완공을 발판으로 타 중동 정유사 연계 수주 다각화"
-    ],
-    "source": "Oil & Gas Journal",
-    "publishedAt": "2024-08-20",
-    "url": "https://www.samsungena.com"
-  },
-  {
-    "id": "card-6",
-    "deepLink": "?card=card-6",
-    "category": "입찰",
-    "client": "쿠웨이트 KOC/KNPC",
-    "title": "쿠웨이트 KOC 가스 압축기지(BS-160) 및 KNPC 석유화학 재건 EPC 입찰",
-    "titleEn": "Kuwait KOC Booster Station & KNPC Refining Optimization EPC Bids",
-    "summary": [
-      "KOC 발주 신규 가스 가공 승압기지(Booster Station BS-160) EPC 기술 입찰서 제출",
-      "쿠웨이트 2040 에너지 전략에 맞춘 발주처 클리어런스 확보 및 독점 기술 제안 추진",
-      "약 8억~10억 달러 규모의 사업으로 쿠웨이트 시장 수주 재개 및 대형 물량 확보 목표"
-    ],
-    "source": "MEED",
-    "publishedAt": "2025-01-12",
-    "url": "https://www.samsungena.com"
-  },
-  {
-    "id": "card-7",
-    "deepLink": "?card=card-7",
-    "category": "FEED to EPC",
-    "client": "인도 ACME",
-    "title": "인도 ACME 오만 두쿰 그린 암모니아 프로젝트 FEED 완료 및 EPC 독점 협상",
-    "titleEn": "ACME Oman Duqm Green Ammonia Plant FEED & Preferred EPC Partner",
-    "summary": [
-      "인도 ACME 그룹이 오만 두쿰(Duqm)에 추진하는 그린 수소/암모니아 플랜트 FEED 완성",
-      "EPC 본계약 전환을 위한 발주처 프로젝트 파이낸싱(PF) 및 주요 모듈화 설계 협의 진행",
-      "신재생에너지 연계 그린 암모니아 분야 선점 및 약 10억 달러 이상 대형 EPC 수주 타겟"
-    ],
-    "source": "Recharge News",
-    "publishedAt": "2024-10-05",
-    "url": "https://www.samsungena.com"
-  },
-  {
-    "id": "card-8",
-    "deepLink": "?card=card-8",
-    "category": "FEED / EPC",
-    "client": "멕시코 Mexinol",
-    "title": "멕시코 멕시놀(Mexinol) 태평양 연안 저탄소 메탄올 플랜트 EPC 파이프라인",
-    "titleEn": "Mexinol Ultra-Low Carbon Methanol Facility FEED & EPC Contracting",
-    "summary": [
-      "멕시코 파시피코 연안 세계 최대 규모 저탄소 메탄올 플랜트 FEED 완료 및 EPC 전환 준비",
-      "발주처(Mexinol/Pacifico Energy)의 환경영향평가 승인에 발맞춰 FID 확정 타임라인 정립",
-      "약 20억 달러 규모의 대형 초격차 메탄올 EPC 수주를 통한 북미/중남미 시장 공략 가속화"
-    ],
-    "source": "Hydrocarbon Processing",
-    "publishedAt": "2025-03-30",
-    "url": "https://www.samsungena.com"
-  },
-  {
-    "id": "card-9",
-    "deepLink": "?card=card-9",
-    "category": "Pre-FEED / FEED",
-    "client": "호주/인도네시아 INPEX",
-    "title": "호주/인도네시아 INPEX 아바디 LNG 및 익시스 CCS 연계 FEED 프로젝트",
-    "titleEn": "INPEX Abadi LNG / Ichthys Expansion Hydrocarbon & CCS FEED",
-    "summary": [
-      "INPEX 주도 인도네시아 아바디(Abadi) LNG 육상 플랜트 및 호주 익시스 CCS Pre-FEED 참여",
-      "심해 가스전 연계 육상 공정 모듈화 및 탄소 포집 효율화를 위한 발주처 스펙 검토",
-      "아시아-태평양 지역 친환경 육상 가스 처리 및 CCS EPC 연계 수주 기반 마련"
-    ],
-    "source": "LNG Intelligence",
-    "publishedAt": "2025-06-14",
-    "url": "https://www.samsungena.com"
-  }
-]
+{
+  "updatedAt": "2026. 3. 30 07:30 기준",
+  "sections": [
+    {
+      "id": 1,
+      "title": "주요 기업 동향",
+      "items": [
+        {
+          "headline": "삼성E&A, 사우디 파딜리 가스 플랜트 등 대형 EPC 현장 공정 호조",
+          "summary": "삼성E&A가 수주한 사우디 아람코 파딜리 가스 증산 프로젝트 패키지 1·4번의 모듈러 공법 및 AWP(Advanced Work Packaging) 적용이 차질 없이 진행되며 수익성 중심의 견조한 매출 성장을 견인하고 있습니다.",
+          "source": "국내외 경제지 종합",
+          "url": "https://www.samsungena.com"
+        },
+        {
+          "headline": "삼성E&A 친환경 사업(Ahead) 가시화… 말레이시아 청정 수소 프로젝트 박차",
+          "summary": "H2Biscus 그린 수소·암모니아 프로젝트의 FEED 완료 후 본 EPC 전환 단계 점검이 가속화되며, CCUS 및 SAF(지속가능항공유) 등 에너지 전환 분야 선점 전략이 본격적인 결실을 맺고 있습니다.",
+          "source": "E&P 및 EPC 전문 뉴스",
+          "url": "https://www.samsungena.com"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "그룹 및 해외 언론 뉴스",
+      "items": [
+        {
+          "headline": "해외 언론, 'FEED to EPC' 연계 전략으로 글로벌 EPC 경쟁력 재편 평가",
+          "summary": "MEED 및 Hydrocarbon Processing 등 해외 주요 언론은 삼성E&A를 비롯한 선도 EPC 기업들이 선제적 FEED(기본설계) 수행을 통해 EPC 수주 확률을 크게 높이고 리스크를 사전 차단하는 고수익 중심 구조로 탈바꿈했다고 분석했습니다.",
+          "source": "MEED / Hydrocarbon Processing",
+          "url": "https://www.samsungena.com"
+        },
+        {
+          "headline": "중동 및 아태지역 탈탄소 EPC 시장 규모, 2030년까지 연평균 12% 성장 전망",
+          "summary": "글로벌 시장조사기관 보고서에 따르면, 기존 가스·정유 플랜트의 저탄소화(CCUS 연계) 및 그린 암모니아 플랜트 발주가 가속화되면서 글로벌 엔지니어링 기업들의 수주 잔고 질이 더욱 개선될 것으로 전망됩니다.",
+          "source": "Global Energy Review",
+          "url": "https://www.samsungena.com"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "입찰 관련 주요 뉴스",
+      "items": [
+        {
+          "headline": "사우디·UAE 주요 가스 처리 및 석유화학 대형 패키지 입찰 경쟁 본격화",
+          "summary": "사우디 아람코의 자푸라 비전통 가스전 2단계 및 UAE 아드녹의 루와이스 화학단지 유틸리티 패키지 입찰이 임박함에 따라, 글로벌 Top-tier EPC 업체들의 컨소시엄 구성 및 가격 입찰 준비가 치열해지고 있습니다.",
+          "source": "플랜트 입찰 소식통",
+          "url": "https://www.samsungena.com"
+        },
+        {
+          "headline": "동남아 및 카타르 LNG/가스 플랜트 추가 발주 파이프라인 지속 확대",
+          "summary": "인도네시아 및 말레이시아의 해상/육상 가스전 연계 LNG 플랜트 프로젝트와 카타르 에너지의 추가 가스 처리 시설 입찰 타임라인이 구체화되면서 아시아·중동 지역 EPC 수주 모멘텀이 강화될 것으로 보입니다.",
+          "source": "Upstream Online",
+          "url": "https://www.samsungena.com"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "글로벌 석유 메이저 (Aramco, ADNOC 등)",
+      "items": [
+        {
+          "headline": "아람코(Aramco), 2030 가스 증산 목표 달성 위해 상류/중류 CAPEX 집행 지속",
+          "summary": "사우디 아람코가 가스 생산량을 2030년까지 2021년 대비 60% 이상 늘린다는 계획하에 비전통 가스 및 가스전 정제 설비 확충을 위한 대규모 EPC 발주를 차질 없이 진행하고 있습니다.",
+          "source": "Aramco Newsroom",
+          "url": "https://www.aramco.com"
+        },
+        {
+          "headline": "아드녹(ADNOC), 150억 달러 규모 저탄소 자본지출 및 저탄소 LNG 투자 가속",
+          "summary": "UAE 아드녹은 하일앤샤(Hail & Ghasha) 가스전 수소·CCUS 연계 사업과 루와이스 저탄소 LNG 프로젝트를 통해 탄소 배출을 극소화하는 지속가능 에너지 인프라 구축을 총력 추진 중입니다.",
+          "source": "ADNOC Media Center",
+          "url": "https://www.adnoc.ae"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "title": "삼성E&A 핵심 프로젝트 공정 및 친환경 신사업 순항",
+      "summary": "사우디 파딜리 프로젝트 등 대형 현장의 차질 없는 공정 진행과 'FEED to EPC' 전략 기반의 고수익 수주 구조 확립.",
+      "category": "주요동향",
+      "client": "Samsung E&A",
+      "source": "삼성E&A 브리핑",
+      "url": "https://www.samsungena.com"
+    },
+    {
+      "title": "아람코·아드녹 가스 증산 및 저탄소 플랜트 발주 호조",
+      "summary": "중동 메이저 발주처의 대규모 가스 증산 및 CCUS 연계 플랜트 CAPEX 투자 확대로 국내외 EPC 수주 파이프라인 견조.",
+      "category": "시장전망",
+      "client": "Aramco / ADNOC",
+      "source": "MEED 종합",
+      "url": "https://www.aramco.com"
+    }
+  ]
+}
