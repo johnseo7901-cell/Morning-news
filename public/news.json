@@ -3,105 +3,75 @@
     "id": "card-1",
     "category": "수주",
     "client": "사우디 Aramco",
-    "title": "삼성E&A, 사우디 파드힐리 가스 증설 프로젝트 60억 달러 초대형 수주",
-    "titleEn": "Samsung E&A Wins $6 Billion Fadhili Gas Plant Expansion Contracts in Saudi Arabia",
+    "title": "삼성E&A, 사우디 파드힐리 가스 증설 메가 프로젝트 수주 계약 완료",
+    "titleEn": "Samsung E&A Secures Major Packages for Saudi Aramco's Fadhili Gas Plant Expansion",
     "summary": [
-      "사우디 파드힐리(Fadhili) 가스 처리시설 증설 사업 중 패키지 1번(가스 처리시설) 및 패키지 4번(유틸리티 및 Offsite) 수행",
-      "총 계약 규모 약 60억 달러(한화 약 8조 원)로 한국 EPC 기업의 사우디 수주 역사상 최대 금액 기록",
-      "아람코와의 견고한 신뢰관계를 바탕으로 메가 프로젝트 수행 능력 입증 및 중동 시장 지배력 제고"
+      "사우디 파드힐리(Fadhili) 가스처리시설 증설 사업 중 핵심 가스 처리 및 유틸리티 패키지 수주 확정",
+      "상세 설계, 기자재 조달, 시공(EPC) 전과정을 일괄 수행하며 사업 초기 단계 착수",
+      "총 계약 규모 약 60억 달러 수준으로 아람코 중심의 중동 대형 가스 플랜트 시장 주도권 강화"
     ],
-    "source": "연합뉴스",
-    "publishedAt": "2024-04-03",
-    "url": "https://www.yna.co.kr/view/AKR20240403024800003"
+    "source": "MEED",
+    "publishedAt": "2026-09-22",
+    "url": "https://www.google.com/search?tbm=nws&q=MEED%20%EC%82%BC%EC%84%B1E%26A%2C%20%EC%82%AC%EC%9A%B0%EB%94%94%20%ED%8C%8C%EB%93%9C%ED%9E%90%EB%A6%AC%20%EA%B0%80%EC%8A%A4%20%EC%A6%9D%EC%84%A4%20%EB%A9%94%EA%B0%80%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%88%98%EC%A3%BC%20%EA%B3%84%EC%95%BD%20%EC%99%84%EB%A3%8C"
   },
   {
     "id": "card-2",
-    "category": "수주",
-    "client": "UAE ADNOC",
-    "title": "ADNOC, 루와이스 저탄소 LNG 프로젝트 55억 달러 EPC 계약 체결",
-    "titleEn": "ADNOC Awards $5.5bn EPC Contract for Low-Carbon Ruwais LNG Project",
+    "category": "FEED",
+    "client": "멕시코 Mexinol",
+    "title": "삼성E&A, 멕시코 메시놀 그린메탄올 프로젝트 FEED 수행 및 EPC 연계 추진",
+    "titleEn": "Samsung E&A Advances Mexinol Green Methanol FEED Project in Mexico",
     "summary": [
-      "UAE 아부다비 알루와이스(Al Ruwais) 지역에 연산 960만 톤 규모의 저탄소 LNG 플랜트 건설",
-      "Technip Energies 컨소시엄(JGC, NMDC Energy)이 EPC 본계약을 수주하여 사업 추진 본격화",
-      "전기 구동 압축기 도입 등 친환경 탄소 배출 저감 기술이 전면 적용되는 중동 최초의 그린 LNG 시설"
+      "멕시코 파시피코 연안 연산 220만 톤 규모 그린메탄올 플랜트의 FEED(기본설계) 상세 진행",
+      "발주처의 최종투자결정(FID) 일정에 맞춰 EPC 전환 우선협상권 확보 및 조건 협의",
+      "북미 친환경 에너제틱스 시장 내 선제적 진입 및 FEED-to-EPC 연계 전략 성과 가속화"
     ],
-    "source": "MEED",
-    "publishedAt": "2024-06-13",
-    "url": "https://www.meed.com/adnoc-awards-epc-contract-for-ruwais-lng-project"
+    "source": "Oil & Gas Middle East",
+    "publishedAt": "2026-09-22",
+    "url": "https://www.google.com/search?tbm=nws&q=Oil%20%26%20Gas%20Middle%20East%20%EC%82%BC%EC%84%B1E%26A%2C%20%EB%A9%95%EC%8B%9C%EC%BD%94%20%EB%A9%94%EC%8B%9C%EB%86%80%20%EA%B7%B8%EB%A6%B0%EB%A9%94%ED%83%84%EC%98%AC%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20FEED%20%EC%88%98%ED%96%89%20%EB%B0%8F%20EPC%20%EC%97%B0%EA%B3%84%20%EC%B6%94%EC%A7%84"
   },
   {
     "id": "card-3",
-    "category": "FEED",
-    "client": "멕시코 Mexinol",
-    "title": "삼성E&A, 멕시코 퍼시픽 멕시놀 그린 메탄올 프로젝트 FEED 수행",
-    "titleEn": "Samsung E&A Executes FEED for Mexinol Green Methanol Plant in Mexico",
+    "category": "입찰",
+    "client": "UAE ADNOC",
+    "title": "UAE 아부다비 타지즈(TA'ZIZ) 화학단지 핵심 유틸리티 입찰 평가 본격화",
+    "titleEn": "Bidding Escalates for ADNOC TA'ZIZ Chemicals Industrial Zone Utilities Package",
     "summary": [
-      "멕시코 시날로아주 토폴로밤포 지역에 일산 5,400톤 규모 그린 메탄올 생산 플랜트 건설을 위한 기본설계 진행",
-      "Pre-FEED 성공적 수행에 이어 본 FEED 단계까지 연계 수주하며 신단지 기술력 검증 완료",
-      "향후 총 수조 원 규모에 달하는 EPC 본계약 전환(FEED-to-EPC) 우선권 확보 기대"
+      "UAE 루와이스 단지 내 TA'ZIZ 화학단지용 인프라 및 유틸리티 패키지 입찰서 제출 완료",
+      "삼성E&A를 포함한 주요 글로벌 EPC 업체 간 기술 및 가격 입찰 심사 단계 진행 중",
+      "약 20억 달러 규모 사업으로 ADNOC의 다운스트림 및 가속화 사업 수주 기대"
     ],
-    "source": "한국경제",
-    "publishedAt": "2024-01-25",
-    "url": "https://www.hankyung.com/article/2024012548291"
+    "source": "Upstream Online",
+    "publishedAt": "2026-09-22",
+    "url": "https://www.google.com/search?tbm=nws&q=Upstream%20Online%20UAE%20%EC%95%84%EB%B6%80%EB%8B%A4%EB%B9%84%20%ED%83%80%EC%A7%80%EC%A6%88(TA'ZIZ)%20%ED%99%94%ED%95%99%EB%8B%A8%EC%A7%80%20%ED%95%B5%EC%8B%AC%20%EC%9C%A0%ED%8B%B8%EB%A6%AC%ED%8B%B0%20%EC%9E%85%EC%B0%B0%20%ED%8F%89%EA%B0%80%20%EB%B3%B8%EA%B2%A9%ED%99%94"
   },
   {
     "id": "card-4",
-    "category": "수주",
-    "client": "카타르 QE (QatarEnergy)",
-    "title": "삼성E&A, 카타르 라스라판 에틸렌 플랜트 패키지 2 수주",
-    "titleEn": "Samsung E&A and CTCI Awarded Package 2 for Ras Laffan Petrochemical Project",
+    "category": "입찰",
+    "client": "호주/인니 INPEX",
+    "title": "인도네시아 아바디(Abadi) LNG 프로젝트 육상 플랜트 FEED 입찰 경쟁 심화",
+    "titleEn": "INPEX Invites Bids for Abadi Onshore LNG Plant FEED in Indonesia",
     "summary": [
-      "카타르 라스라판 산업단지 내 초대형 에틸렌 크래커 유틸리티 및 오프사이트(Offsite) 시설 건설",
-      "대만 CTCI와 조인트벤처를 구성하여 총 25억 달러(삼성E&A 지분 약 12억 달러) 규모 사업 수주",
-      "중동 석유화학 시장의 핵심 발주처인 카타르에너지(QE)와의 장기 협력 파트너십 강화"
+      "INPEX가 추진하는 아바디 가스전 사업의 육상 LNG 가공 및 CCS 설비 FEED 입찰서 평가",
+      "글로벌 EPC 컨소시엄 간 기술제안서 검토 및 수주 타당성 검증 단계 돌입",
+      "동남아 최대급 LNG 개발 사업에 따른 차세대 LNG 및 탄소포집 EPC 수주 기회 확보"
     ],
-    "source": "Oil & Gas Middle East",
-    "publishedAt": "2023-01-09",
-    "url": "https://www.oilandgasmiddleeast.com/news/qatarenergy-chevronphillips-rlpc-epc"
+    "source": "Upstream Online",
+    "publishedAt": "2026-09-22",
+    "url": "https://www.google.com/search?tbm=nws&q=Upstream%20Online%20%EC%9D%B8%EB%8F%84%EB%84%A4%EC%8B%9C%EC%95%84%20%EC%95%84%EB%B0%94%EB%94%94(Abadi)%20LNG%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%9C%A1%EC%83%81%20%ED%94%8C%EB%9E%9C%ED%8A%B8%20FEED%20%EC%9E%85%EC%B0%B0%20%EA%B2%BD%EC%9F%81%20%EC%8B%AC%ED%99%94"
   },
   {
     "id": "card-5",
     "category": "FEED",
     "client": "인도 ACME",
-    "title": "삼성E&A, 인도 ACME 오만 그린 암모니아 프로젝트 FEED 연계 진척",
-    "titleEn": "Samsung E&A Progresses FEED Work for ACME Oman Green Ammonia Project",
+    "title": "인도 ACME 오만 그린암모니아 프로젝트 FEED 완료 및 EPC 전환 검토",
+    "titleEn": "ACME Progresses Engineering and FEED for Oman Green Ammonia Plant",
     "summary": [
-      "오만 두큼(Duqm) 경제특구 내 연간 120만 톤 규모 그린 암모니아 생산 설비 구축 프로젝트",
-      "인도 신재생에너지 기업 ACME와의 협업을 통해 수소·암모니아 분야 FEED 기술 검증 수행",
-      "글로벌 에너지 전환 흐름에 맞춘 친환경 신사업 영역의 EPC 본사업 연계 수주 타깃"
-    ],
-    "source": "더구루",
-    "publishedAt": "2023-09-18",
-    "url": "https://www.theguru.co.kr/news/article.html?no=60124"
-  },
-  {
-    "id": "card-6",
-    "category": "입찰",
-    "client": "사우디 SABIC",
-    "title": "사우디 SABIC, 탈탄소 및 석유화학 설비 효율화 입찰 평가 착수",
-    "titleEn": "SABIC Evaluates EPC Bids for Saudi Decarbonisation and Petrochemical Projects",
-    "summary": [
-      "사우디 SABIC이 추진하는 탄소포집·활용(CCUS) 및 기존 가스·석유화학 단지 에너지 효율화 입찰 진행",
-      "삼성E&A를 포함한 글로벌 입찰 참여사들의 입찰서 평가 절차 진행 중",
-      "SABIC의 2050 탄소중립 이행 전략에 따른 대형 친환경 EPC 프로젝트 발주 지속 전망"
+      "오만 두쿰 경제특구 내 연산 120만 톤 규모 그린수소·암모니아 플랜트 FEED 최종 검토",
+      "발주처 ACME와 EPC 사업비 산정 및 수주 계약 전환을 위한 막바지 협의 진행",
+      "중동-아시아 친환경 수소 공급망 선점을 위한 EPC 기술 경쟁력 확보"
     ],
     "source": "MEED",
-    "publishedAt": "2024-02-19",
-    "url": "https://www.meed.com/sabic-evaluates-bids-for-saudi-decarbonisation-projects"
-  },
-  {
-    "id": "card-7",
-    "category": "입찰",
-    "client": "호주/인도네시아 INPEX",
-    "title": "INPEX, 인도네시아 아바디(Abadi) FLNG 및 육상 처리시설 입찰 추진",
-    "titleEn": "INPEX Prepares Bids for Giant Abadi LNG and CCS Project in Indonesia",
-    "summary": [
-      "인도네시아 마루쿠 해역 아바디 가스전 개발을 위한 연산 950만 톤 규모 LNG 처리 플랜트 프로젝트",
-      "CCS(탄소포집·저장) 연계 기술이 적용되며 육상 및 해상 FEED/EPC 입찰 절차 순차 진행",
-      "아시아-태평양 지역 최대 규모 LNG 발주 건으로 글로벌 주요 EPC 컨소시엄 수주 경쟁 본격화"
-    ],
-    "source": "Upstream Online",
-    "publishedAt": "2024-05-10",
-    "url": "https://www.upstreamonline.com/lng/inpex-launches-tenders-for-giant-abadi-lng-project/2-1-1641000"
+    "publishedAt": "2026-09-22",
+    "url": "https://www.google.com/search?tbm=nws&q=MEED%20%EC%9D%B8%EB%8F%84%20ACME%20%EC%98%A4%EB%A7%8C%20%EA%B7%B8%EB%A6%B0%EC%95%94%EB%AA%A8%EB%8B%88%EC%95%84%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20FEED%20%EC%99%84%EB%A3%8C%20%EB%B0%8F%20EPC%20%EC%A0%84%ED%99%98%20%EA%B2%80%ED%86%A0"
   }
 ]
