@@ -5,7 +5,6 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // 캐시 방지 파라미터(?t=)를 붙여 매일 아침 최신 news.json을 즉시 가져옵니다.
     fetch('/news.json?t=' + Date.now())
       .then((res) => res.json())
       .then((data) => {
@@ -21,6 +20,18 @@ export default function App() {
         setLoading(false);
       });
   }, []);
+
+  // 기사 원문으로 바로 이동하는 안전 검색 핸들러
+  const handleOpenLink = (card) => {
+    // 1. 유효한 직접 링크가 있으면 해당 링크로 이동
+    if (card.url && card.url.startsWith('http') && !card.url.includes('samsungena.com')) {
+      window.location.href = card.url;
+      return;
+    }
+    // 2. 검색어가 필요한 경우 다음/구글 모바일 뉴스로 즉시 직행
+    const query = encodeURIComponent(`삼성E&A ${card.client || ''} ${card.title || ''}`);
+    window.location.href = `https://m.search.daum.net/search?w=news&q=${query}`;
+  };
 
   return (
     <div style={{ maxWidth: '500px', margin: '0 auto', padding: '16px', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif', backgroundColor: '#f1f5f9', minHeight: '100vh' }}>
@@ -46,8 +57,8 @@ export default function App() {
         </div>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-          {cards.map((card) => (
-            <article key={card.id || card.title} style={{ backgroundColor: '#ffffff', borderRadius: '16px', padding: '18px', boxShadow: '0 2px 6px rgba(0,0,0,0.04)', border: '1px solid #e2e8f0' }}>
+          {cards.map((card, idx) => (
+            <article key={card.id || idx} style={{ backgroundColor: '#ffffff', borderRadius: '16px', padding: '18px', boxShadow: '0 2px 6px rgba(0,0,0,0.04)', border: '1px solid #e2e8f0' }}>
               
               {/* 카테고리 태그 및 발주처 */}
               <div style={{ display: 'flex', gap: '6px', alignItems: 'center', marginBottom: '10px' }}>
@@ -56,10 +67,10 @@ export default function App() {
                   color: card.category?.includes('수주') ? '#0284c7' : card.category?.includes('입찰') ? '#d97706' : '#7c3aed',
                   fontSize: '11px', fontWeight: '700', padding: '3px 8px', borderRadius: '6px' 
                 }}>
-                  {card.category || '동향'}
+                  {card.category || '수주'}
                 </span>
                 <span style={{ backgroundColor: '#f8fafc', border: '1px solid #cbd5e1', color: '#334155', fontSize: '11px', fontWeight: '600', padding: '3px 8px', borderRadius: '6px' }}>
-                  {card.client}
+                  {card.client || '글로벌 발주처'}
                 </span>
                 <span style={{ fontSize: '11px', color: '#94a3b8', marginLeft: 'auto' }}>
                   {card.publishedAt}
@@ -93,14 +104,23 @@ export default function App() {
                 </ul>
               </div>
 
-              {/* 하단 출처 및 링크 */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', color: '#94a3b8' }}>
-                <span>출처: {card.source}</span>
-                {card.url && (
-                  <a href={card.url} target="_blank" rel="noreferrer" style={{ color: '#0284c7', textDecoration: 'none', fontWeight: '600' }}>
-                    원문 링크 →
-                  </a>
-                )}
+              {/* 하단 출처 및 원문 링크 버튼 */}
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', color: '#94a3b8', borderTop: '1px solid #f1f5f9', paddingTop: '10px' }}>
+                <span>출처: {card.source || '전문지 종합'}</span>
+                <button
+                  onClick={() => handleOpenLink(card)}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    color: '#0284c7',
+                    fontWeight: '700',
+                    fontSize: '12px',
+                    cursor: 'pointer',
+                    padding: '4px 0'
+                  }}
+                >
+                  기사 원문 보기 →
+                </button>
               </div>
 
             </article>
