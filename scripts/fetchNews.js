@@ -1,104 +1,144 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import React, { useState, useEffect } from 'react';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+export default function App() {
+  const [cards, setCards] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-async function getNewsData() {
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) {
-    console.error('에러: GEMINI_API_KEY 환경변수가 설정되지 않았습니다.');
-    process.exit(1);
-  }
-
-  const now = new Date();
-  const kstOffset = 9 * 60;
-  const kstTime = new Date(now.getTime() + (now.getTimezoneOffset() + kstOffset) * 60000);
-  const todayStr = kstTime.toISOString().split('T')[0];
-
-  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`;
-
-  const prompt = `삼성E&A(Samsung E&A, 구 삼성엔지니어링) 및 글로벌 플랜트 EPC 업계의 최근 수주, 입찰, FEED, 대형 계약 관련 실제 주요 뉴스를 바탕으로 모바일 카드뉴스 데이터를 JSON으로 작성해 줘.
-핵심 모니터링 대상: 사우디 Aramco/SABIC, UAE ADNOC, 카타르 QE, 바레인 Bapco, 쿠웨이트 KOC/KNPC, 인도 ACME, 멕시코 Mexinol, 호주/인니 INPEX.
-
-[필수 요구사항]:
-1. 발행일시(publishedAt)는 반드시 "${todayStr}"로 기재할 것.
-2. 마크다운 백틱 없이 순수 JSON 배열([])만 출력할 것.
-
-JSON 형식:
-[
-  {
-    "id": "card-1",
-    "category": "수주 / 입찰 / FEED 중 택1",
-    "client": "발주처 (예: 사우디 Aramco, UAE ADNOC 등)",
-    "title": "실제 포털/언론사에서 검색 가능한 정확한 국문 요약 제목",
-    "titleEn": "영문 원문 기사 제목",
-    "summary": [
-      "프로젝트 진행 현황 및 패키지 주요 내역",
-      "발주처 협의 및 입찰 평가 진행 일정",
-      "사업 수주 시 기대 파급 효과 및 계약 규모"
-    ],
-    "source": "언론사명 (예: 연합뉴스, MEED, Oil & Gas Middle East)",
-    "publishedAt": "${todayStr}"
-  }
-]
-`;
-
-  let attempts = 0;
-  const maxAttempts = 3;
-
-  while (attempts < maxAttempts) {
-    attempts++;
-    try {
-      const response = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-      });
-
-      const result = await response.json();
-      if (result.error) {
-        if (result.error.code === 503 && attempts < maxAttempts) {
-          await sleep(5000);
-          continue;
+  useEffect(() => {
+    fetch('/news.json?t=' + Date.now())
+      .then((res) => res.json())
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setCards(data);
+        } else if (data && Array.isArray(data.items)) {
+          setCards(data.items);
         }
-        process.exit(1);
-      }
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("데이터 로드 실패:", err);
+        setLoading(false);
+      });
+  }, []);
 
-      let text = result.candidates[0].content.parts[0].text.trim();
-      if (text.startsWith('```json')) text = text.replace(/^```json/, '').replace(/```$/, '').trim();
-      else if (text.startsWith('```')) text = text.replace(/^```/, '').replace(/```$/, '').trim();
+  // 모바일 팝업 차단 없이 실제 원문 검색으로 100% 이동하는 함수
+  const goToOriginalArticle = (card) => {
+    const isKorean = /연합뉴스|매일경제|한국경제|조선|동아|머니투데이/.test(card.source || '');
+    let searchUrl = '';
 
-      const parsed = JSON.parse(text);
-      if (Array.isArray(parsed)) {
-        parsed.forEach(item => {
-          item.publishedAt = todayStr;
-          // 가짜 깨진 링크 대신, 정확한 기사 원문으로 바로 이어지는 구글 뉴스 다이렉트 검색 링크 생성
-          const query = encodeURIComponent(`${item.source || ''} ${item.title}`);
-          item.url = `https://www.google.com/search?tbm=nws&q=${query}`;
-        });
-        text = JSON.stringify(parsed, null, 2);
-      }
-
-      const publicDir = path.join(__dirname, '../public');
-      if (!fs.existsSync(publicDir)) {
-        fs.mkdirSync(publicDir, { recursive: true });
-      }
-
-      fs.writeFileSync(path.join(publicDir, 'news.json'), text, 'utf-8');
-      console.log('실제 기사 직행 링크 생성 완료');
-      return;
-    } catch (err) {
-      if (attempts < maxAttempts) {
-        await sleep(5000);
-        continue;
-      }
-      process.exit(1);
+    if (isKorean) {
+      // 국내 언론사: 네이버 모바일 뉴스 검색
+      searchUrl = `https://m.search.naver.com/search.naver?where=m_news&query=${encodeURIComponent('삼성E&A ' + card.title)}`;
+    } else {
+      // 글로벌 외신(MEED, Reuters, Bloomberg 등): 구글 모바일 뉴스 검색
+      const query = card.titleEn ? `Samsung E&A ${card.titleEn}` : `Samsung E&A ${card.title}`;
+      searchUrl = `https://www.google.com/search?tbm=nws&q=${encodeURIComponent(query)}`;
     }
-  }
-}
 
-getNewsData();
+    // 모바일 브라우저 팝업 차단을 우회하여 현재 창에서 즉시 이동
+    window.location.href = searchUrl;
+  };
+
+  return (
+    <div style={{ maxWidth: '500px', margin: '0 auto', padding: '16px', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif', backgroundColor: '#f1f5f9', minHeight: '100vh' }}>
+      
+      {/* 헤더 */}
+      <header style={{ backgroundColor: '#ffffff', borderRadius: '16px', padding: '18px 20px', marginBottom: '16px', boxShadow: '0 1px 3px rgba(0,0,0,0.05)', borderBottom: '3px solid #002f6c' }}>
+        <h1 style={{ fontSize: '18px', fontWeight: '800', color: '#002f6c', margin: '0 0 6px 0', display: 'flex', alignItems: 'center', gap: '6px' }}>
+          📋 삼성E&A 글로벌 수주·입찰 브리핑
+        </h1>
+        <p style={{ fontSize: '12px', color: '#64748b', margin: 0 }}>
+          모니터링: Reuters, MEED, Bloomberg, Aramco, ADNOC 등 전 세계 외신
+        </p>
+      </header>
+
+      {/* 카드뉴스 본문 */}
+      {loading ? (
+        <div style={{ textAlign: 'center', padding: '40px 0', color: '#64748b', fontSize: '14px' }}>
+          최신 브리핑을 불러오는 중입니다...
+        </div>
+      ) : cards.length === 0 ? (
+        <div style={{ backgroundColor: '#ffffff', borderRadius: '14px', padding: '30px', textAlign: 'center', color: '#64748b' }}>
+          금일 업데이트된 브리핑 기사가 없습니다.
+        </div>
+      ) : (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+          {cards.map((card, idx) => (
+            <article key={card.id || idx} style={{ backgroundColor: '#ffffff', borderRadius: '16px', padding: '18px', boxShadow: '0 2px 6px rgba(0,0,0,0.04)', border: '1px solid #e2e8f0' }}>
+              
+              {/* 뱃지 및 일자 */}
+              <div style={{ display: 'flex', gap: '6px', alignItems: 'center', marginBottom: '10px' }}>
+                <span style={{ 
+                  backgroundColor: card.category?.includes('수주') ? '#e0f2fe' : card.category?.includes('입찰') ? '#fef3c7' : '#f3e8ff',
+                  color: card.category?.includes('수주') ? '#0284c7' : card.category?.includes('입찰') ? '#d97706' : '#7c3aed',
+                  fontSize: '11px', fontWeight: '700', padding: '3px 8px', borderRadius: '6px' 
+                }}>
+                  {card.category || '수주'}
+                </span>
+                <span style={{ backgroundColor: '#f8fafc', border: '1px solid #cbd5e1', color: '#334155', fontSize: '11px', fontWeight: '600', padding: '3px 8px', borderRadius: '6px' }}>
+                  {card.client || '글로벌 발주처'}
+                </span>
+                <span style={{ fontSize: '11px', color: '#94a3b8', marginLeft: 'auto' }}>
+                  {card.publishedAt}
+                </span>
+              </div>
+
+              {/* 국문 제목 */}
+              <h2 style={{ fontSize: '15px', fontWeight: '700', color: '#0f172a', margin: '0 0 4px 0', lineHeight: '1.4' }}>
+                {card.title}
+              </h2>
+
+              {/* 영문 원문 제목 */}
+              {card.titleEn && (
+                <p style={{ fontSize: '12px', color: '#64748b', margin: '0 0 12px 0', fontStyle: 'italic', lineHeight: '1.3' }}>
+                  {card.titleEn}
+                </p>
+              )}
+
+              {/* 3줄 요약 불릿 */}
+              <div style={{ backgroundColor: '#f8fafc', borderRadius: '10px', padding: '12px', marginBottom: '12px' }}>
+                <ul style={{ margin: 0, paddingLeft: '18px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  {Array.isArray(card.summary) ? (
+                    card.summary.map((point, pIdx) => (
+                      <li key={pIdx} style={{ fontSize: '13px', color: '#334155', lineHeight: '1.45' }}>
+                        {point}
+                      </li>
+                    ))
+                  ) : (
+                    <li style={{ fontSize: '13px', color: '#334155', lineHeight: '1.45' }}>{card.summary}</li>
+                  )}
+                </ul>
+              </div>
+
+              {/* 하단 출처 및 기사 원문 버튼 (모바일 팝업 차단 방지) */}
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', color: '#94a3b8', borderTop: '1px solid #f1f5f9', paddingTop: '10px' }}>
+                <span style={{ fontWeight: '600', color: '#475569' }}>출처: {card.source || '전문지 종합'}</span>
+                <button
+                  type="button"
+                  onClick={() => goToOriginalArticle(card)}
+                  style={{
+                    backgroundColor: '#0284c7',
+                    color: '#ffffff',
+                    border: 'none',
+                    borderRadius: '6px',
+                    padding: '6px 12px',
+                    fontWeight: '700',
+                    fontSize: '11px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  기사 원문 보기 →
+                </button>
+              </div>
+
+            </article>
+          ))}
+        </div>
+      )}
+
+      <footer style={{ textAlign: 'center', fontSize: '11px', color: '#94a3b8', marginTop: '24px', paddingBottom: '16px' }}>
+        삼성E&A EPC Bidding Intelligence Briefing
+      </footer>
+    </div>
+  );
+}
