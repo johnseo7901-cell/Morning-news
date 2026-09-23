@@ -18,7 +18,7 @@ async function getNewsData() {
   const kstTime = new Date(now.getTime() + (now.getTimezoneOffset() + kstOffset) * 60000);
   const todayStr = kstTime.toISOString().split('T')[0];
 
-  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`;
 
   const prompt = `오늘(${todayStr}) 기준 지난 24시간 동안 전 세계 주요 언론 및 플랜트 전문 매체에 보도된 '삼성E&A(Samsung E&A, 삼성엔지니어링)' 관련 수주, 입찰, FEED, 계약 관련 실제 기사를 검색해서 카드뉴스용 브리핑 데이터를 JSON으로 작성해 줘.
 필수 모니터링: 사우디(Aramco, SABIC), UAE(ADNOC), 카타르(QE), 바레인(Bapco), 쿠웨이트(KOC/KNPC), 인도(ACME), 멕시코(Mexinol), 호주/인니(INPEX).
