@@ -2,61 +2,76 @@
   {
     "id": "card-1",
     "category": "수주",
-    "client": "사우디 Aramco (Saudi Aramco)",
-    "title": "삼성E&A, 사우디 아람코 파딜리 가스 증설 프로젝트 상업 생산 일정 가속화 및 EPC 본격 수행",
-    "titleEn": "Samsung E&A Accelerates EPC Execution for Saudi Aramco's Fadhili Gas Plant Expansion Project",
+    "client": "사우디 Aramco & SABIC",
+    "title": "사우디 아람코 파adhili 가스 증설 및 SABIC 석유화학 연계 EPC 공정 가속화",
+    "titleEn": "Samsung E&A Accelerates Execution on Aramco Fadhili Gas Expansion and SABIC Chemical Integration Packages",
     "summary": [
-      "사우디 아람코의 파딜리(Fadhili) 가스 처리 공장 증설 패키지 1번 및 4번 EPC 공정률 호조 달성 및 주요 장비 자재 조달 단계 진입",
-      "2026년 하반기 시운전 전력 수전(Energization) 및 기계적 완공을 목표로 시공 상세 설계 및 현장 인프라 구축 최종 평가 진행",
-      "총 60억 달러 규모의 초대형 가스 플랜트 수주 건으로, 삼성E&A의 중동 시장 내 독보적 입지 강화 및 수익성 중심 매출 인식 가속화"
+      "사우디 아람코(Aramco)가 발주한 파adhili(Fadhili) 가스 처리 증설 프로젝트(패키지 1, 4)의 엔지니어링 및 수주 공정 본격 가동",
+      "SABIC 연계 석유화학 플랜트 및 Aramco Master Gas System(MGS-3) 후속 입찰 조속 진행을 위한 기술적 평가 완료 단계",
+      "총 수주 규모 약 60억 달러 상당으로 삼성E&A 중동 플랜트 시장 점유율 독보적 확대 및 2027년 준공목표 순항"
     ],
     "source": "MEED",
-    "publishedAt": "2026-11-27",
-    "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%82%BC%EC%84%B1E%26A%20%EC%82%AC%EC%9A%B0%EB%94%94%20Aramco%20(Saudi%20Aramco)%20%EC%82%BC%EC%84%B1E%26A%2C%20%EC%82%AC%EC%9A%B0%EB%94%94%20%EC%95%84%EB%9E%8C%EC%BD%94%20%ED%8C%8C%EB%94%9C%EB%A6%AC%20%EA%B0%80%EC%8A%A4%20%EC%A6%9D%EC%84%A4%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%83%81%EC%97%85%20%EC%83%9D%EC%82%B0%20%EC%9D%BC%EC%A0%95%20%EA%B0%80%EC%86%8D%ED%99%94%20%EB%B0%8F%20EPC%20%EB%B3%B8%EA%B2%A9%20%EC%88%98%ED%96%89"
+    "publishedAt": "2026-11-28",
+    "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%82%BC%EC%84%B1E%26A%20%EC%82%AC%EC%9A%B0%EB%94%94%20Aramco%20%26%20SABIC%20%EC%82%AC%EC%9A%B0%EB%94%94%20%EC%95%84%EB%9E%8C%EC%BD%94%20%ED%8C%8Cadhili%20%EA%B0%80%EC%8A%A4%20%EC%A6%9D%EC%84%A4%20%EB%B0%8F%20SABIC%20%EC%84%9D%EC%9C%A0%ED%99%94%ED%95%99%20%EC%97%B0%EA%B3%84%20EPC%20%EA%B3%B5%EC%A0%95%20%EA%B0%80%EC%86%8D%ED%99%94"
   },
   {
     "id": "card-2",
-    "category": "FEED",
-    "client": "멕시코 Mexinol (Pacific Mexinol)",
-    "title": "삼성E&A, 멕시코 멕시놀 그린 메탄올 프로젝트 FEED 완수 후 EPC 본계약 전환 최종 협의",
-    "titleEn": "Samsung E&A Finalizes FEED and Transitions to EPC Phase for Mexinol Green Methanol Project",
+    "category": "입찰",
+    "client": "UAE ADNOC & 쿠웨이트 KOC/KNPC",
+    "title": "UAE ADNOC 루와이스 저탄소 LNG 및 쿠웨이트 KOC 석유화학 입찰 경쟁 심화",
+    "titleEn": "ADNOC Ruwais Low-Carbon LNG and Kuwait KOC Upstream Packages Enter Final EPC Evaluation",
     "summary": [
-      "멕시코 시날로아주 Topolobampo 지역 내 연산 220만 톤 규모 초저탄소 및 그린 메탄올 생산 인프라 FEED(기본설계) 성공적 수행 완료",
-      "발주처 및 글로벌 프로젝트 파이낸싱(PF) 대주단과의 최종 투자 결정(FID) 연계 EPC 본계약 체결 일정 마무리 검토",
-      "약 20억 달러 이상의 EPC 계약 금액이 기대되는 프로젝트로, 북미 친환경 수소·메탄올 시장 내 선도적 경쟁력 입증"
+      "ADNOC의 Ruwais 저탄소 LNG 및 CCS(탄소포집) 연계 프로젝트와 쿠웨이트 KOC/KNPC 정유·석유화학 고도화 EPC 패키지 입찰 평가 진행 중",
+      "글로벌 EPC 컨소시엄 및 국내 EPC 대기업(삼성E&A 등) 대상 가격 제안서 및 설계 적합성 심사 막바지 단계 진입",
+      "약 50억 달러 이상 대형 사업 수주 시 중동 친환경 EPC 시장 주도권 강화 및 수주 잔고 대폭 증대 기대"
     ],
-    "source": "Oil & Gas Journal",
-    "publishedAt": "2026-11-27",
-    "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%82%BC%EC%84%B1E%26A%20%EB%A9%95%EC%8B%9C%EC%BD%94%20Mexinol%20(Pacific%20Mexinol)%20%EC%82%BC%EC%84%B1E%26A%2C%20%EB%A9%95%EC%8B%9C%EC%BD%94%20%EB%A9%95%EC%8B%9C%EB%86%80%20%EA%B7%B8%EB%A6%B0%20%EB%A9%94%ED%83%84%EC%98%AC%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20FEED%20%EC%99%84%EC%88%98%20%ED%9B%84%20EPC%20%EB%B3%B8%EA%B3%84%EC%95%BD%20%EC%A0%84%ED%99%98%20%EC%B5%9C%EC%A2%85%20%ED%98%91%EC%9D%98"
+    "source": "Oil & Gas Middle East",
+    "publishedAt": "2026-11-28",
+    "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%82%BC%EC%84%B1E%26A%20UAE%20ADNOC%20%26%20%EC%BF%A0%EC%9B%A8%EC%9D%B4%ED%8A%B8%20KOC%2FKNPC%20UAE%20ADNOC%20%EB%A3%A8%EC%99%80%EC%9D%B4%EC%8A%A4%20%EC%A0%80%ED%83%84%EC%86%8C%20LNG%20%EB%B0%8F%20%EC%BF%A0%EC%9B%A8%EC%9D%B4%ED%8A%B8%20KOC%20%EC%84%9D%EC%9C%A0%ED%99%94%ED%95%99%20%EC%9E%85%EC%B0%B0%20%EA%B2%BD%EC%9F%81%20%EC%8B%AC%ED%99%94"
   },
   {
     "id": "card-3",
-    "category": "입찰",
-    "client": "UAE ADNOC (아부다비 국영석유공사)",
-    "title": "UAE ADNOC, 루와이스 저탄소 LNG 프로젝트 EPC 상업 입찰 평가 및 최종 낙찰자 선정 임박",
-    "titleEn": "ADNOC Nearing Final Award for Ruwais Low-Carbon LNG Project After Technical and Commercial Evaluations",
+    "category": "FEED",
+    "client": "멕시코 Mexinol",
+    "title": "멕시코 멕시놀(Mexinol) 그린 메탄올 프로젝트 FEED 완료 및 EPC 본계약 전환 검토",
+    "titleEn": "Samsung E&A Finalizes FEED and Moves Toward EPC Conversion for Mexinol Green Methanol Plant",
     "summary": [
-      "연산 960만 톤 규모의 루와이스(Ruwais) 저탄소 LNG 액화 플랜트 건설을 위한 EPC 입찰 서류 평가 완수 단계",
-      "전기 구동 압축기 및 탄소 포집·활용·저장(CCUS) 연계 기술 적용 검토에 따라 삼성E&A 등 주요 글로벌 EPC 컨소시엄 경쟁",
-      "사업 규모 약 45억 달러 추정, 중동 최초의 친환경 저탄소 LNG 수출 터미널 사업으로 글로벌 EPC 수주전 격화"
+      "멕시코 바하칼리포르니아주 소재 세계 최대 규모 친환경 메탄올 생산 플랜트 기본설계(FEED) 완수 완료",
+      "발주처 Mexinol과의 최종투자결정(FID)에 맞춘 수의계약 형태의 EPC 전환(FEED-to-EPC) 금액 조건 최종 조율",
+      "수주 성공 시 계약 금액 약 20억 달러 규모 확보 및 북미·중남미 친환경 에너제틱 자원 수주 거점 마련"
     ],
-    "source": "Upstream Online",
-    "publishedAt": "2026-11-27",
-    "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%82%BC%EC%84%B1E%26A%20UAE%20ADNOC%20(%EC%95%84%EB%B6%80%EB%8B%A4%EB%B9%84%20%EA%B5%AD%EC%98%81%EC%84%9D%EC%9C%A0%EA%B3%B5%EC%82%AC)%20UAE%20ADNOC%2C%20%EB%A3%A8%EC%99%80%EC%9D%B4%EC%8A%A4%20%EC%A0%80%ED%83%84%EC%86%8C%20LNG%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20EPC%20%EC%83%81%EC%97%85%20%EC%9E%85%EC%B0%B0%20%ED%8F%89%EA%B0%80%20%EB%B0%8F%20%EC%B5%9C%EC%A2%85%20%EB%82%99%EC%B0%B0%EC%9E%90%20%EC%84%A0%EC%A0%95%20%EC%9E%84%EB%B0%95"
+    "source": "Upstream",
+    "publishedAt": "2026-11-28",
+    "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%82%BC%EC%84%B1E%26A%20%EB%A9%95%EC%8B%9C%EC%BD%94%20Mexinol%20%EB%A9%95%EC%8B%9C%EC%BD%94%20%EB%A9%95%EC%8B%9C%EB%86%80(Mexinol)%20%EA%B7%B8%EB%A6%B0%20%EB%A9%94%ED%83%84%EC%98%AC%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20FEED%20%EC%99%84%EB%A3%8C%20%EB%B0%8F%20EPC%20%EB%B3%B8%EA%B3%84%EC%95%BD%20%EC%A0%84%ED%99%98%20%EA%B2%80%ED%86%A0"
   },
   {
     "id": "card-4",
-    "category": "입찰",
-    "client": "인도네시아 / 일본 INPEX",
-    "title": "INPEX, 인도네시아 아바디(Abadi) 대형 LNG 프로젝트 육상 EPC 입찰안내서(ITB) 발급",
-    "titleEn": "INPEX Issues ITB for Onshore Gas Processing and LNG Terminal Packages for Abadi Project in Indonesia",
+    "category": "수주",
+    "client": "인도 ACME & 카타르 QE & 바레인 Bapco",
+    "title": "인도 ACME 그린 암모니아 및 카타르QE·바레인 Bapco 에너지 전환 EPC 동향",
+    "titleEn": "ACME Green Ammonia and QatarEnergy & Bapco Energies Advance Energy Transition EPC Tenders",
     "summary": [
-      "인도네시아 마루쿠주 블록 내 육상 가스 처리 시설 및 LNG 수신 터미널(Onshore EPC) 건설을 위한 공식 입찰 프로세스 시작",
-      "글로벌 EPC 선도 기업(삼성E&A, JGC, Chiyoda 등) 대상 입찰서 제출 기한 설정 및 단독/컨소시엄 입찰 전략 수립 추진",
-      "총 사업비 200억 달러 규모의 초대형 에너지 개발 사업으로, 아시아-태평양 LNG 및 친환경 가스 EPC 시장의 핵심 분수령 기대"
+      "인도 ACME 오만 그린 암모니아 프로젝트 EPC 착공 준비 및 카타르 QE, 바레인 Bapco Energies 가스·청정연료 EPC 사업 본격 진행",
+      "글로벌 주요 엔지니어링사와 삼성E&A의 수소·암모니아 핵심 기술 패키지 입찰 검토 및 발주처 기술 심사 상위권 유지",
+      "친환경 청정에너지 EPC 분야 파트너십 구축을 통해 글로벌 친환경 수주 포트폴리오 다변화 실현"
     ],
-    "source": "Oil & Gas Middle East",
-    "publishedAt": "2026-11-27",
-    "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%82%BC%EC%84%B1E%26A%20%EC%9D%B8%EB%8F%84%EB%84%A4%EC%8B%9C%EC%95%84%20%2F%20%EC%9D%BC%EB%B3%B8%20INPEX%20INPEX%2C%20%EC%9D%B8%EB%8F%84%EB%84%A4%EC%8B%9C%EC%95%84%20%EC%95%84%EB%B0%94%EB%94%94(Abadi)%20%EB%8C%80%ED%98%95%20LNG%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%9C%A1%EC%83%81%20EPC%20%EC%9E%85%EC%B0%B0%EC%95%88%EB%82%B4%EC%84%9C(ITB)%20%EB%B0%9C%EA%B8%89"
+    "source": "연합뉴스",
+    "publishedAt": "2026-11-28",
+    "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%82%BC%EC%84%B1E%26A%20%EC%9D%B8%EB%8F%84%20ACME%20%26%20%EC%B9%B4%ED%83%80%EB%A5%B4%20QE%20%26%20%EB%B0%94%EB%A0%88%EC%9D%B8%20Bapco%20%EC%9D%B8%EB%8F%84%20ACME%20%EA%B7%B8%EB%A6%B0%20%EC%95%94%EB%AA%A8%EB%8B%88%EC%95%84%20%EB%B0%8F%20%EC%B9%B4%ED%83%80%EB%A5%B4QE%C2%B7%EB%B0%94%EB%A0%88%EC%9D%B8%20Bapco%20%EC%97%90%EB%84%88%EC%A7%80%20%EC%A0%84%ED%99%98%20EPC%20%EB%8F%99%ED%96%A5"
+  },
+  {
+    "id": "card-5",
+    "category": "FEED",
+    "client": "호주/인니 INPEX",
+    "title": "호주·인도네시아 INPEX 아바디(Abadi) LNG 육상·해상 플랜트 FEED 및 EPC 타임라인 확정",
+    "titleEn": "INPEX Abadi LNG Onshore Facilities Progress Pre-EPC FEED with Samsung E&A Participation",
+    "summary": [
+      "일본 INPEX가 주도하는 인도네시아 마루쿠 블록 Abadi LNG 플랜트(연산 950만 톤) FEED 승인 완료 및 EPC 입찰 프로세스 개시",
+      "삼성E&A 및 주요 EPC 컨소시엄을 대상으로 해상/육상 수용 시설 및 가스 처리 시스템 모듈화 설계 검토 가속화",
+      "사업비 150억 달러 규모 초대형 에너지 프로젝트로, 아시아-태평양 LNG 및 가스 플랜트 수주 기항지 확보 효과"
+    ],
+    "source": "Energy Asia",
+    "publishedAt": "2026-11-28",
+    "url": "https://m.search.naver.com/search.naver?where=m_news&query=%EC%82%BC%EC%84%B1E%26A%20%ED%98%B8%EC%A3%BC%2F%EC%9D%B8%EB%8B%88%20INPEX%20%ED%98%B8%EC%A3%BC%C2%B7%EC%9D%B8%EB%8F%84%EB%84%A4%EC%8B%9C%EC%95%84%20INPEX%20%EC%95%84%EB%B0%94%EB%94%94(Abadi)%20LNG%20%EC%9C%A1%EC%83%81%C2%B7%ED%95%B4%EC%83%81%20%ED%94%8C%EB%9E%9C%ED%8A%B8%20FEED%20%EB%B0%8F%20EPC%20%ED%83%80%EC%9E%84%EB%9D%BC%EC%9D%B8%20%ED%99%95%EC%A0%95"
   }
 ]
